@@ -4,7 +4,8 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 150vh;
+    min-height: 100vh; /* Ensure minimum viewport height */
+    position: relative; /* Ensure relative positioning for absolute children */
 }
 
 header {
@@ -14,9 +15,9 @@ header {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
     position: relative;
+    flex-direction: column;
     z-index: 2; /* Ensure header is above other sections */
 }
 
@@ -43,14 +44,21 @@ h1 {
 footer {
     background-color: black;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     height: 100px;
     width: 100%;
-    position: relative;
-    z-index: 2; /* Ensure footer is above other sections */
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the viewport */
+    z-index: 1; /* Ensure footer is below other sections */
+    margin-top: 0; /* Remove margin from the top */
 }
-
+#footermenu {
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+    width: 80%;
+}
 #footermenu a {
     text-decoration: none;
     color: gold;
@@ -60,13 +68,21 @@ footer {
     margin-right: 5px;
 }
 
+footer p {
+    color: gold;
+    margin-left: 20px;
+}
+
 .foodbanner {
     position: relative;
-    z-index: 1; /* Ensure foodbanner is below header and above content */
+    z-index: 0; /* Ensure foodbanner is below other sections */
+    height: 70vh; /* Adjust height as needed */
 }
 
 .foodbanner img {
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers entire container */
     display: block;
 }
 
@@ -74,7 +90,7 @@ footer {
     color: gold;
     background-color: rgb(44, 43, 43);
     padding: 20px;
-    z-index: 2; 
+    z-index: 2; /* Ensure welcomebanner is above other sections */
 }
 
 .welcomebanner h2 {
@@ -82,21 +98,111 @@ footer {
 }
 
 .content {
-    background-color: white;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    position: absolute;
-    z-index: 2; 
+    position: relative;
+    z-index: 3; /* Ensure content is above foodbanner and welcomebanner */
+    top: 45%; /* Adjust as needed */
+    transform: translateY(-10%);
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Set flex direction to column */
     align-items: center;
-    top: 85%;
-    bottom: 0;
-    height: 60vh;
+    background-color: white; /* Ensure white background is visible */
+    padding: 30px;
+    box-sizing: border-box;
+    margin-top: 50px;
 }
 
-.content a {
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.row2 {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container2 h2 {
+    width: 50%;
+}
+
+.container2 p {
+    font-size: 1.0em;
+    color: black;
+    font-weight: bold;
+    width: 50%;
+}
+
+.container2 {
+    flex: 0 0 45%; /* Adjust width as needed */
+    padding-left: 20px;
+}
+.container {
+    flex: 0 0 45%; /* Adjust width as needed */
+    padding-right: 20px;
+}
+
+.container p {
+    font-size: 1.0em;
+    color: black;
+    font-weight: bold;
+}
+
+.imgcontainer {
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    flex: 0 0 35%; /* Adjust width as needed */
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.imgcontainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+.imgcontainer2 {
+    display: flex;
+    justify-content: flex-start; /* Align image to the left */
+    width: 30%;
+    position: relative; /* Ensure relative positioning for absolute children */
+    margin-bottom: 0; /* Remove margin from the bottom */
+    margin-right: 20px;
+}
+
+.imgcontainer2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content h2 {
     color: black;
     margin: 0;
+    padding: 10px 0;
+    font-size: 2rem;
+}
+
+#buttons {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+#buttons li a {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#pizza {
+    max-width: 100%;
 }
