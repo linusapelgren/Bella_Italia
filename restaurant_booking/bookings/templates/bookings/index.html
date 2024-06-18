@@ -17,7 +17,7 @@
                 <li><a href="{% url 'index' %}">Home</a></li>
                 <li><a href="{% url 'menu' %}">Menu</a></li>
                 <li><a href="{% url 'make_reservation' %}">Booking</a></li>
-                <li><a href="{% url 'restaurant_detail' %}">About us</a></li>
+                <li><a href="{% url 'restaurant_detail' %}">About</a></li>
             </ul>
         </nav>
     </header>
@@ -25,13 +25,35 @@
         <h2>Welcome to Bella Italia</h2>
         <p>At Bella Italia we serve the best Italian food in town. Our menu is filled with delicious dishes that will make you feel like you are in Italy. We have a wide selection of pasta, pizza, and other Italian dishes. We also have a great selection of wines to go with your meal. Come and visit us today!</p>
     </section>
-    <section class="content">
-        <h2><a href="{% url 'make_reservation' %}">Make a reservation</a></h2>
-    </section>
     <section class="foodbanner">
         <img src="{% static 'bookings/images/italianfood.jpg' %}" alt="Italian food">
     </section>
+    <section class="content">
+        <div class="row">
+            <div class="container">
+                <h2>Make a reservation</h2>
+                <p>We want the eating experience to be as easy as possible for you, therefore we have a booking system on our website!</p>
+                <ul id="buttons">
+                    <li><a href="{% url 'make_reservation' %}">Go to booking page</a></li>
+                    <li><a href="{% url 'menu' %}">Our menu</a></li>
+                </ul>
+            </div>
+            <div class="imgcontainer">
+                <img src="{% static 'bookings/images/pizza.png' %}" alt="Pizza" id="pizza">
+            </div>
+        </div>
+        <div class="row2">
+            <div class="imgcontainer2">
+                <img src="{% static 'bookings/images/openinghours.png' %}" alt="Opening Hours">
+            </div>
+            <div class="container2">
+                <h2>Our location</h2>
+                <p>We are located in the heart of the city. Our address is: 123 Main Street, Örebro, Sweden. To the left you will see our opening hours</p>
+            </div>
+        </div>
+    </section>
     <footer>
+        <p>&copy; 2021 Bella Italia</p>
         <nav id="footermenu">
             <ul>
                 <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i>Follow us on instagram</a></li>
