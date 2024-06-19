@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'bookings/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6vP0kho8N9+9hQi9D9/ThJmGfjA9j5s2nL4D8kSBjYFkydbbKej42L0ieR7GQyT" crossorigin="anonymous">   
+    <link rel="stylesheet" href="{% static 'bookings/css/styles.css' %}">   
+    <title>Bella Italia</title> 
+</head>
+<body>
+    <header>
+        <h1>Bella Italia</h1>
+        <nav id="menu">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'make_reservation' %}">Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container3">
+        <h2>Cancel your reservation</h2>
+        <p>Are you sure you want to cancel your reservation?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Yes</button>
+        </form>
+    </section>
+    <footer id="menufooter">
+        <p>&copy; 2021 Bella Italia</p>
+        <nav id="footermenu">
+            <ul>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i>Follow us on instagram</a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i>Check out our facebook</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
