@@ -10,13 +10,14 @@
     <title>Bella Italia</title> 
 </head>
 <body>
-    <header id="header">
+    <header>
         <h1>Bella Italia</h1>
         <nav id="menu">
             <ul>
                 <li><a href="{% url 'index' %}">Home</a></li>
                 <li><a href="{% url 'menu' %}">Menu</a></li>
                 <li><a href="{% url 'make_reservation' %}">Booking</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -35,6 +36,5 @@
             </ul>
         </nav>
     </footer>
-    <script src="{% static 'bookings/scripts/script.js' %}"></script>
 </body>
 </html>
