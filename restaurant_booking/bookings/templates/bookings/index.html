@@ -10,14 +10,13 @@
     <title>Bella Italia</title> 
 </head>
 <body>
-    <header>
+    <header id="header">
         <h1>Bella Italia</h1>
         <nav id="menu">
             <ul>
                 <li><a href="{% url 'index' %}">Home</a></li>
                 <li><a href="{% url 'menu' %}">Menu</a></li>
                 <li><a href="{% url 'make_reservation' %}">Booking</a></li>
-                <li><a href="{% url 'restaurant_detail' %}">About</a></li>
             </ul>
         </nav>
     </header>
@@ -47,8 +46,9 @@
                 <img src="{% static 'bookings/images/openinghours.png' %}" alt="Opening Hours">
             </div>
             <div class="container2">
-                <h2>Our location</h2>
-                <p>We are located in the heart of the city. Our address is: 123 Main Street, Örebro, Sweden. To the left you will see our opening hours</p>
+                <h2>Contact</h2>
+                <p>+46 701111111</p>
+                <p>We are located in the heart of the city. Our address is: 123 Main Street, Örebro, Sweden.</p>
             </div>
         </div>
     </section>
@@ -61,5 +61,6 @@
             </ul>
         </nav>
     </footer>
+    <script src="{% static 'bookings/scripts/script.js' %}"></script>
 </body>
 </html>
