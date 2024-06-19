@@ -14,16 +14,38 @@ header {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     position: relative;
-    flex-direction: column;
-    z-index: 2; /* Ensure header is above other sections */
+    flex-direction: row;
+    z-index: 200; /* Ensure header is above other sections */
+    transition: all 0.3s ease; /* Add a transition for smooth animation */
+    padding-left: 50px;
 }
 
+header.sticky {
+    position: fixed;
+    top: -120px; /* Start off the screen */
+    width: 100%;
+    z-index: 200;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for effect */
+    background-color: black; /* Make the background slightly transparent */
+}
+
+header.sticky.visible {
+    top: 0; /* Slide down into view */
+}
+header h1 {
+    margin: 0;
+}
+#menu {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    align-items: center;
+}
 #menu ul {
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     gap: 20px;
     font-size: x-large;
@@ -88,7 +110,7 @@ footer p {
 
 .welcomebanner {
     color: gold;
-    background-color: rgb(44, 43, 43);
+    background-color: rgb(87, 78, 78);
     padding: 20px;
     z-index: 2; /* Ensure welcomebanner is above other sections */
 }
@@ -128,6 +150,11 @@ footer p {
 
 .container2 h2 {
     width: 50%;
+    display: flex;
+}
+
+.container h2 {
+    width: 80%;
 }
 
 .container2 p {
@@ -138,18 +165,18 @@ footer p {
 }
 
 .container2 {
-    flex: 0 0 45%; /* Adjust width as needed */
+    flex: 0 0 45%;
     padding-left: 20px;
 }
 .container {
-    flex: 0 0 45%; /* Adjust width as needed */
-    padding-right: 20px;
+    flex: 0 0 25%;
 }
 
 .container p {
     font-size: 1.0em;
     color: black;
     font-weight: bold;
+    width: 80%;
 }
 
 .imgcontainer {
@@ -205,4 +232,84 @@ footer p {
 
 #pizza {
     max-width: 100%;
+}
+
+.pdf-container {
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    overflow: auto; /* Enable scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdf-container embed {
+    width: 80%; /* Adjust width as needed */
+    height: 100%; /* Take full height of container */
+    max-height: 100%; /* Ensure it doesn't exceed container height */
+    margin: auto;
+}
+
+#menufooter{
+    position: unset;
+    margin-top: 50px;
+}
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+   /* Add custom styles for the form */
+.reservation-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flexbox;
+}
+
+.reservation-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.reservation-form input[type=text], 
+.reservation-form input[type=number], 
+.reservation-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.reservation-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.reservation-form button:hover {
+    background-color: #45a049;
+}
+
+.formcontainer{
+    width: 50%;
+    border: 2px solid black;
 }
