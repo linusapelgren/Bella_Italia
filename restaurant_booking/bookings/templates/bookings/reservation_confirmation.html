@@ -1,10 +1,47 @@
+<!-- bookings/templates/bookings/reservation_confirmation.html -->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation Confirmation</title>
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'bookings/css/styles.css' %}">
 </head>
 <body>
-    <h1>Reservation Confirmed</h1>
-    <p>Your reservation at {{ reservation.restaurant.name }} for {{ reservation.date }} at {{ reservation.time }} has been confirmed.</p>
+    <header>
+        <h1>Bella Italia</h1>
+        <nav id="menu">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'make_reservation' %}">Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content">
+        <h2>Reservation Confirmed</h2>
+        <div class="confirmation-details">
+            <p>Your reservation at Bella Italia for:</p>
+            <ul>
+                <li><strong>Name:</strong> {{ reservation.name }}</li>
+                <li><strong>Phone Number:</strong> {{ reservation.phone_number }}</li>
+                <li><strong>Number of Guests:</strong> {{ reservation.guests }}</li>
+                <li><strong>Date:</strong> {{ reservation.date }}</li>
+                <li><strong>Time:</strong> {{ reservation.time }}</li>
+            </ul>
+            <p>has been confirmed.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2021 Bella Italia</p>
+        <nav id="footermenu">
+            <ul>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i>Follow us on Instagram</a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i>Check out our Facebook</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

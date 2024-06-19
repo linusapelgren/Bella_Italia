@@ -1,3 +1,5 @@
+<!-- bookings/templates/bookings/make_reservation.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{% static 'bookings/images/favicon.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6vP0kho8N9+9hQi9D9/ThJmGfjA9j5s2nL4D8kSBjYFkydbbKej42L0ieR7GQyT" crossorigin="anonymous">   
-    <link rel="stylesheet" href="{% static 'bookings/css/styles.css' %}">   
-    <title>Bella Italia</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'bookings/css/styles.css' %}">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>Bella Italia - Make a Reservation</title> 
 </head>
 <body>
     <header>
@@ -21,25 +24,85 @@
         </nav>
     </header>
     <section class="content">
-        <h2>Make a Reservation</h1>
+        <h2>Make a Reservation</h2>
         <div class="formcontainer">
-            <form method="post" class="reservation-form">
+            <form method="post" action="{% url 'make_reservation' %}" class="reservation_form">
                 {% csrf_token %}
-                {{ form.as_p }}
+                <div class="fieldWrapper">
+                    {{ form.name.label_tag }}
+                    {{ form.name }}
+                </div>
+                <div class="fieldWrapper">
+                    {{ form.phone_number.label_tag }}
+                    {{ form.phone_number }}
+                </div>
+                <div class="fieldWrapper">
+                    {{ form.guests.label_tag }}
+                    {{ form.guests }}
+                </div>
+                <div class="fieldWrapper">
+                    {{ form.date.label_tag }}
+                    {{ form.date }}
+                </div>
+                <div class="fieldWrapper">
+                    {{ form.time.label_tag }}
+                    {{ form.time }}
+                </div>
                 <button type="submit">Book</button>
             </form>
         </div>
-        <div class="imgcontainer">
-        </div>
     </section>
     <footer>
-        <p>&copy; 2021 Bella Italia</p>
+        <p>&copy; 2024 Bella Italia</p>
         <nav id="footermenu">
             <ul>
-                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i>Follow us on instagram</a></li>
-                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i>Check out our facebook</a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i>Follow us on Instagram</a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i>Check out our Facebook</a></li>
             </ul>
         </nav>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var currentYear = new Date().getFullYear();
+            var endDate = new Date(currentYear, 11, 31); // Set end date to Dec 31 of current year
+
+            $('#id_date').datepicker({
+                dateFormat: 'yy-mm-dd',
+                changeMonth: true,
+                changeYear: false,
+                showButtonPanel: true,
+                minDate: new Date(),
+                maxDate: endDate,
+                beforeShowDay: function(date) {
+                    var day = date.getDay();
+                    return [(day != 0), '']; // Block Sundays (0 = Sunday)
+                },
+                onSelect: function(dateText) {
+                    $.ajax({
+                        url: "{% url 'get_available_times' %}",
+                        data: {
+                            'date': dateText
+                        },
+                        success: function(data) {
+                            var timeSelect = $('#id_time');
+                            timeSelect.empty();
+                            $.each(data.times, function(index, value) {
+                                timeSelect.append($('<option>', {
+                                    value: value,
+                                    text: value
+                                }));
+                            });
+                        }
+                    });
+                }
+            });
+
+            $('#id_date').trigger('change');
+        });
+    </script>
 </body>
 </html>

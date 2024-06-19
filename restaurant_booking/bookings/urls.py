@@ -1,10 +1,12 @@
+# bookings/urls.py
+
 from django.urls import path
-from . import views
+from .views import index, make_reservation, reservation_confirmation, menu, get_available_times
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('restaurant/', views.restaurant_detail, name='restaurant_detail'),
-    path('reserve/', views.make_reservation, name='make_reservation'),
-    path('reservation/confirmation/', views.reservation_confirmation, name='reservation_confirmation'),
-    path('restaurant/menu/', views.menu, name='menu'),
+    path('', index, name='index'),
+    path('make-reservation/', make_reservation, name='make_reservation'),
+    path('reservation-confirmation/<int:reservation_id>/', reservation_confirmation, name='reservation_confirmation'),
+    path('menu/', menu, name='menu'),
+    path('get-available-times/', get_available_times, name='get_available_times'),
 ]
