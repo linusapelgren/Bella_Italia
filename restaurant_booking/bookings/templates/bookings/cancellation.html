@@ -20,15 +20,19 @@
             </ul>
         </nav>
     </header>
-    <section class="container3">
-        <h2>Cancel your reservation</h2>
-        <p>Are you sure you want to cancel your reservation?</p>
-        <form method="post">
-            {% csrf_token %}
-            <button type="submit">Yes</button>
-        </form>
+    <section class="content">
+        <h2>Cancel reservation</h2>
+        <div class="confirmation-details">
+            <ul>
+                <li><strong>Name:</strong> {{ reservation.name }}</li>
+                <li><strong>Phone Number:</strong> {{ reservation.phone_number }}</li>
+                <li><strong>Date:</strong> {{ reservation.date }}</li>
+                <li><strong>Time:</strong> {{ reservation.time }}</li>
+            </ul>
+            <a href="{% url 'cancel_reservation' reservation.id %}" class="confirmation-details-button">Cancel</a>
+        </div>
     </section>
-    <footer id="menufooter">
+    <footer>
         <p>&copy; 2021 Bella Italia</p>
         <nav id="footermenu">
             <ul>

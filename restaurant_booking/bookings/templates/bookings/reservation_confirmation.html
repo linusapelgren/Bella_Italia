@@ -31,6 +31,7 @@
                 <li><strong>Date:</strong> {{ reservation.date }}</li>
                 <li><strong>Time:</strong> {{ reservation.time }}</li>
             </ul>
+            <a href="{% url 'cancellation' reservation.id %}" class="cancel">Cancel</a>
         </div>
     </section>
     <footer>

@@ -26,7 +26,7 @@
     <section class="content">
         <h2>Make a Reservation</h2>
         <div class="formcontainer">
-            <form method="post" action="{% url 'make_reservation' %}" class="reservation_form">
+            <form method="post" action="{% url 'make_reservation' %}" class="reservation_form" id="reservationForm">
                 {% csrf_token %}
                 <div class="fieldWrapper">
                     {{ form.name.label_tag }}
@@ -90,12 +90,27 @@
                         success: function(data) {
                             var timeSelect = $('#id_time');
                             timeSelect.empty();
-                            $.each(data.times, function(index, value) {
+                            if (data.times.length > 0) {
+                                $.each(data.times, function(index, value) {
+                                    timeSelect.append($('<option>', {
+                                        value: value,
+                                        text: value
+                                    }));
+                                });
+                            } else {
                                 timeSelect.append($('<option>', {
-                                    value: value,
-                                    text: value
+                                    value: '',
+                                    text: 'No available times for this date'
                                 }));
-                            });
+                            }
+                        },
+                        error: function() {
+                            var timeSelect = $('#id_time');
+                            timeSelect.empty();
+                            timeSelect.append($('<option>', {
+                                value: '',
+                                text: 'Error fetching times. Please try again later.'
+                            }));
                         }
                     });
                 }

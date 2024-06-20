@@ -1,5 +1,7 @@
 # bookings/utils.py
 from datetime import datetime, timedelta
+from twilio.rest import Client
+from django.conf import settings
 
 def generate_time_slots(start_time, end_time):
     time_slots = []
@@ -32,3 +34,44 @@ def fetch_available_times(selected_date):
         time_slots = []
 
     return time_slots
+
+# Your Twilio Account SID and Auth Token
+account_sid = 'AC6bba9430be4f5378c72a84b57ba089ef'
+auth_token = '85042c64b48fa2916cec045eddc1a52e'
+
+# Initialize Twilio Client
+client = Client(account_sid, auth_token)
+
+def send_sms(phone_number, reservation):
+    try:
+        # Construct message with reservation details
+        message_body = f"Your reservation has been confirmed at {reservation.date} {reservation.time}. If you want to cancel this reservation click here: http://localhost:8000/cancel-reservation/{reservation.id}"
+        
+        # Send SMS using Twilio API
+        message = client.messages.create(
+            body=message_body,
+            from_='+46734701154',  # Twilio phone number
+            to=phone_number  # Receiver's phone number
+        )
+        print(f"Message sent successfully! SID: {message.sid}")
+        return True
+    except Exception as e:
+        print(f"Failed to send SMS: {str(e)}")
+        return False
+    
+def send_cancel_sms(phone_number, reservation):
+    try:
+        # Construct message with reservation details
+        message_body = f"Your reservation has been canceled at {reservation.date} {reservation.time}"
+        
+        # Send SMS using Twilio API
+        message = client.messages.create(
+            body=message_body,
+            from_='+46734701154',  # Twilio phone number
+            to=phone_number  # Receiver's phone number
+        )
+        print(f"Message sent successfully! SID: {message.sid}")
+        return True
+    except Exception as e:
+        print(f"Failed to send SMS: {str(e)}")
+        return False

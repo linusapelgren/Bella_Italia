@@ -263,7 +263,7 @@ footer p {
 }
 
    /* Add custom styles for the form */
-.reservation-form {
+.reservation_form {
     max-width: 600px;
     margin: auto;
     padding: 20px;
@@ -273,15 +273,15 @@ footer p {
     display: flexbox;
 }
 
-.reservation-form label {
+.reservation_form label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-.reservation-form input[type=text], 
-.reservation-form input[type=number], 
-.reservation-form select {
+.reservation_form input[type=text], 
+.reservation_form input[type=number], 
+.reservation_form select {
     width: 100%;
     padding: 8px;
     margin-bottom: 12px;
@@ -291,7 +291,7 @@ footer p {
     box-sizing: border-box;
 }
 
-.reservation-form button {
+.reservation_form button {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -305,11 +305,69 @@ footer p {
     border-radius: 4px;
 }
 
-.reservation-form button:hover {
+.reservation_form button:hover {
     background-color: #45a049;
 }
 
 .formcontainer{
     width: 50%;
     border: 2px solid black;
+    padding: 20px;
+}
+
+.confirmation-details{
+    border: 2px solid black;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.confirmation-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.confirmation-details ul li {
+    margin-bottom: 10px;
+}
+
+.cancel{
+    background-color: #e72f2f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100px;
+}
+.cancel:hover {
+    background-color: #f30a0a;
+}
+
+.confirmation-details-button{
+    background-color: #e72f2f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100px;
+}
+
+.confirmation-details-button:hover {
+    background-color: #f30a0a;
 }
