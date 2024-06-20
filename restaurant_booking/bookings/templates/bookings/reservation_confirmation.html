@@ -5,9 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservation Confirmation</title>
+    <title>Bella Italia - Reservation Confirmed</title>
     {% load static %} 
     <link rel="stylesheet" href="{% static 'bookings/css/styles.css' %}">
+    <link rel="icon" href="{% static 'bookings/images/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -23,7 +24,6 @@
     <section class="content">
         <h2>Reservation Confirmed</h2>
         <div class="confirmation-details">
-            <p>Your reservation at Bella Italia for:</p>
             <ul>
                 <li><strong>Name:</strong> {{ reservation.name }}</li>
                 <li><strong>Phone Number:</strong> {{ reservation.phone_number }}</li>
@@ -31,7 +31,6 @@
                 <li><strong>Date:</strong> {{ reservation.date }}</li>
                 <li><strong>Time:</strong> {{ reservation.time }}</li>
             </ul>
-            <p>has been confirmed.</p>
         </div>
     </section>
     <footer>

@@ -5,16 +5,11 @@ from .models import Reservation
 from .forms import ReservationForm
 from datetime import datetime
 from django.http import JsonResponse
-from .forms import fetch_available_times
-
+from .utils import fetch_available_times
 from .forms import ReservationForm
 
 def index(request):
     return render(request, 'bookings/index.html')
-
-def make_reservation(request):
-    fetch_available_times = some_function_to_fetch_times()
-    form = ReservationForm(fetch_available_times=fetch_available_times)
 
 def make_reservation(request):
     if request.method == 'POST':
