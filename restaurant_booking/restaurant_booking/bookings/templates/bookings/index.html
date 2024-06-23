@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'bookings/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'bookings/css/styles.css' %}">   
+    <title>Bella Italia</title> 
+</head>
+<body>
+    <header id="header">
+        <h1>Bella Italia</h1>
+        <nav id="menu">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'make_reservation' %}">Booking</a></li>
+            </ul>
+        </nav>
+        <div id="menusmallscreen">
+            <button class="menubtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="sidenav" class="sidenav">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'menu' %}">Menu</a>
+            <a href="{% url 'make_reservation' %}">Booking</a>
+        </div>
+    </header>
+    <section class="welcomebanner">
+        <h2>Welcome to Bella Italia</h2>
+        <p>At Bella Italia we serve the best Italian food in town. Our menu is filled with delicious dishes that will make you feel like you are in Italy. We have a wide selection of pasta, pizza, and other Italian dishes. We also have a great selection of wines to go with your meal. Come and visit us today!</p>
+    </section>
+    <section class="foodbanner">
+        <img src="{% static 'bookings/images/italianfood.jpg' %}" alt="Italian food">
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="container">
+                <h2>Make a reservation</h2>
+                <p>We want the eating experience to be as easy as possible for you, therefore we have a booking system on our website!</p>
+                <ul id="buttons">
+                    <li><a href="{% url 'make_reservation' %}">Go to booking page</a></li>
+                    <li><a href="{% url 'menu' %}">Our menu</a></li>
+                </ul>
+            </div>
+            <div class="imgcontainer">
+                <img src="{% static 'bookings/images/pizza.png' %}" alt="Pizza" id="pizza">
+            </div>
+        </div>
+        <div class="row2">
+            <div class="imgcontainer2">
+                <img src="{% static 'bookings/images/openinghours.png' %}" alt="Opening Hours">
+            </div>
+            <div class="container2">
+                <h2>Contact</h2>
+                <p>+46 701111111</p>
+                <p>We are located in the heart of the city. Our address is: 123 Main Street, Örebro, Sweden.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2021 Bella Italia</p>
+        <nav id="footermenu">
+            <ul>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i>Follow us on instagram</a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i>Check out our facebook</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="{% static 'bookings/scripts/script.js' %}"></script>
+</body>
+</html>

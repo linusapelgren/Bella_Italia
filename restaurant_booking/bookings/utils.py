@@ -38,8 +38,9 @@ def fetch_available_times(selected_date):
 
 account_sid = os.getenv('TWILIO_ACCOUNT_SID')
 auth_token = os.getenv('TWILIO_AUTH_TOKEN')
+phone_number = os.getenv('TWILIO_PHONE_NUMBER')
 # Initialize Twilio Client
-client = Client(account_sid, auth_token)
+client = Client(account_sid, auth_token, phone_number)
 
 def send_sms(phone_number, reservation):
     try:
@@ -49,7 +50,7 @@ def send_sms(phone_number, reservation):
         # Send SMS using Twilio API
         message = client.messages.create(
             body=message_body,
-            from_='+46734701154',  # Twilio phone number
+            from_=phone_number,  # Twilio phone number
             to=phone_number  # Receiver's phone number
         )
         print(f"Message sent successfully! SID: {message.sid}")
@@ -66,7 +67,7 @@ def send_cancel_sms(phone_number, reservation):
         # Send SMS using Twilio API
         message = client.messages.create(
             body=message_body,
-            from_='+46734701154',  # Twilio phone number
+            from_=phone_number,  # Twilio phone number
             to=phone_number  # Receiver's phone number
         )
         print(f"Message sent successfully! SID: {message.sid}")
