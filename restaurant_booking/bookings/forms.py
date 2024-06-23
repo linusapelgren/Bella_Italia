@@ -12,10 +12,13 @@ class ReservationForm(forms.ModelForm):
     time = forms.ChoiceField(label='Time', choices=[])
 
     def __init__(self, *args, **kwargs):
-        fetch_available_times = kwargs.pop('fetch_available_times', None)  # Fetch function from kwargs
+        fetch_available_times = kwargs.pop('fetch_available_times', None)
         super().__init__(*args, **kwargs)
-        
-        if 'initial' in kwargs and 'date' in kwargs['initial']:
+
+        # Get the selected date from form data if available
+        if self.data.get('date'):
+            date = datetime.strptime(self.data['date'], '%Y-%m-%d').date()
+        elif 'initial' in kwargs and 'date' in kwargs['initial']:
             date = kwargs['initial']['date']
         else:
             date = datetime.today().date()
@@ -31,7 +34,6 @@ class ReservationForm(forms.ModelForm):
 
         # Set initial value for the date field
         self.fields['date'].initial = date
-
     class Meta:
         model = Reservation
         fields = ['name', 'phone_number', 'guests', 'date', 'time']

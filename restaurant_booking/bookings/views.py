@@ -23,10 +23,6 @@ def make_reservation(request):
     else:
         form = ReservationForm(fetch_available_times=fetch_available_times)
 
-    available_times = fetch_available_times(datetime.today().date())  # Fetch available times for today
-    print("Available Times:", available_times)
-    print("Form Choices:", form.fields['time'].choices)
-
     return render(request, 'bookings/make_reservation.html', {'form': form})
 
 def reservation_confirmation(request, reservation_id):

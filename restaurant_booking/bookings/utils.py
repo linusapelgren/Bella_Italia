@@ -35,9 +35,9 @@ def fetch_available_times(selected_date):
 
     return time_slots
 
-# Your Twilio Account SID and Auth Token
+# Twilio Account SID and Auth Token
 account_sid = 'AC6bba9430be4f5378c72a84b57ba089ef'
-auth_token = '85042c64b48fa2916cec045eddc1a52e'
+auth_token = 'd5b72b4e983c5392dfd07be84f71f83a'
 
 # Initialize Twilio Client
 client = Client(account_sid, auth_token)

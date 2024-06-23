@@ -3,7 +3,6 @@
 from django.urls import path
 from .views import index, make_reservation, reservation_confirmation, menu, get_available_times, cancellation, cancel_reservation, cancellation_confirmation
 
-
 urlpatterns = [
     path('', index, name='index'),
     path('make-reservation/', make_reservation, name='make_reservation'),
