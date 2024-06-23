@@ -2,6 +2,7 @@
 from datetime import datetime, timedelta
 from twilio.rest import Client
 from django.conf import settings
+import os
 
 def generate_time_slots(start_time, end_time):
     time_slots = []
@@ -35,10 +36,8 @@ def fetch_available_times(selected_date):
 
     return time_slots
 
-# Twilio Account SID and Auth Token
-account_sid = 'AC6bba9430be4f5378c72a84b57ba089ef'
-auth_token = 'd5b72b4e983c5392dfd07be84f71f83a'
-
+account_sid = os.getenv('TWILIO_ACCOUNT_SID')
+auth_token = os.getenv('TWILIO_AUTH_TOKEN')
 # Initialize Twilio Client
 client = Client(account_sid, auth_token)
 

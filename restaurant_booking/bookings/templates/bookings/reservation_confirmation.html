@@ -9,6 +9,7 @@
     {% load static %} 
     <link rel="stylesheet" href="{% static 'bookings/css/styles.css' %}">
     <link rel="icon" href="{% static 'bookings/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -20,6 +21,16 @@
                 <li><a href="{% url 'make_reservation' %}">Booking</a></li>
             </ul>
         </nav>
+        <div id="menusmallscreen">
+            <button class="menubtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="sidenav" class="sidenav">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'menu' %}">Menu</a>
+            <a href="{% url 'make_reservation' %}">Booking</a>
+        </div>
     </header>
     <section class="content">
         <h2>Reservation Confirmed</h2>
@@ -43,5 +54,6 @@
             </ul>
         </nav>
     </footer>
+    <script src="{% static 'bookings/scripts/script.js' %}"></script>
 </body>
 </html>

@@ -368,6 +368,123 @@ footer p {
     width: 100px;
 }
 
+#menusmallscreen{
+    display: none;
+}
+
 .confirmation-details-button:hover {
     background-color: #f30a0a;
+}
+.sidenav {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 120px; /* Adjust according to your header height */
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: height 0.3s ease; /* Smooth transition for height change */
+}
+
+.sidenav a{
+    display: block;
+    text-decoration: none;
+    padding: 8px 8px 8px ;
+    font-size: 25px;
+    color: black;
+    transition: 0.3s;
+    border: solid 1px lightgray;
+}  
+
+.menubtn {
+    background-color: transparent;
+    color: gold;
+    font-size: x-large;
+    cursor: pointer;
+    border: none;
+    z-index: 100;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Adjust the gap within the header for smaller screens */
+@media only screen and (max-width: 600px) {
+    #menu {
+        display: none; /* Hide regular menu */
+    }
+    #menusmallscreen {
+        display: block; /* Show menu button for small screens */
+    }
+    header {
+        gap: 60px; /* Adjust gap for smaller screens */
+    }
+
+    .row {
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+    .imgcontainer,
+    .imgcontainer2 {
+        margin-bottom: 20px; /* Add spacing between stacked elements */
+    }
+
+    .imgcontainer2{
+        width: 100%;
+    }
+    .container,
+    .container2 {
+        width: 100%;/* Full width for stacked elements */
+    }
+
+    .container p {
+        width: 100%;
+    }
+    
+    .container2 p {
+        width: 100%;
+    }
+
+    #buttons{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .formcontainer{
+        width: fit-content;
+    }
+
+    #reservation_footer{
+        position: unset;
+    }
+
+    .row2{
+        flex-direction: column-reverse;
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+    .pdf-container {
+        width: 100%;
+        height: 80vh; /* Adjust the height as needed */
+        overflow: auto; /* Enable scrolling if necessary */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0; /* Light background color for contrast */
+        padding: 20px; /* Add padding to center the PDF viewer */
+        box-sizing: border-box;
+    }
+    
+    .pdf-container embed {
+        width: 100%; /* Take full width of container */
+        height: 100%; /* Take full height of container */
+        max-width: none; /* Ensure it stretches as needed */
+        max-height: none; /* Ensure it stretches as needed */
+    }
+   
+    .content h2{
+        font-size: 1.6rem;
+    }
 }

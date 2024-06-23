@@ -22,6 +22,16 @@
                 <li><a href="{% url 'make_reservation' %}">Booking</a></li>
             </ul>
         </nav>
+        <div id="menusmallscreen">
+            <button class="menubtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="sidenav" class="sidenav">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'menu' %}">Menu</a>
+            <a href="{% url 'make_reservation' %}">Booking</a>
+        </div>
     </header>
     <section class="content">
         <h2>Make a Reservation</h2>
@@ -52,7 +62,7 @@
             </form>
         </div>
     </section>
-    <footer>
+    <footer id="reservation_footer">
         <p>&copy; 2024 Bella Italia</p>
         <nav id="footermenu">
             <ul>
@@ -119,5 +129,6 @@
             $('#id_date').trigger('change');
         });
     </script>
+    <script src="{% static 'bookings/scripts/script.js' %}"></script>
 </body>
 </html>
