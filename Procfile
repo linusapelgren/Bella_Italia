@@ -1,1 +1,1 @@
-web: gunicorn bella_italia.wsgi --log-file -
+web: gunicorn bella_italia.wsgi 

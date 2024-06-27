@@ -10,3 +10,6 @@ class Reservation(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.date} - {self.time}"
+
+    class Meta:
+        app_label = 'bella_italia'
