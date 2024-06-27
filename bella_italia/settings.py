@@ -22,7 +22,11 @@ load_dotenv()
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bella_italia.settings')
 application = get_wsgi_application()
 
-application = WhiteNoise(application, root=os.path.join(BASE_DIR, 'staticfiles'))
+application = WhiteNoise(
+    application,
+    root=os.path.join(BASE_DIR, 'staticfiles'),
+    staticfiles_storage=CompressedManifestStaticFilesStorage,
+)
 
 TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
 TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
