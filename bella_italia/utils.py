@@ -36,42 +36,28 @@ def fetch_available_times(selected_date):
 
     return time_slots
 
+
 account_sid = os.getenv('TWILIO_ACCOUNT_SID')
 auth_token = os.getenv('TWILIO_AUTH_TOKEN')
 phone_number = os.getenv('TWILIO_PHONE_NUMBER')
 # Initialize Twilio Client
 client = Client(account_sid, auth_token, phone_number)
 
-def send_sms(phone_number, reservation):
+def send_sms(reciever_phone_number, reservation):
     try:
-        # Construct message with reservation details
         message_body = f"Your reservation has been confirmed at {reservation.date} {reservation.time}. If you want to cancel this reservation click here: http://localhost:8000/cancel-reservation/{reservation.id}"
         
-        # Send SMS using Twilio API
+        # Ensure client is properly initialized
+        client = Client(account_sid, auth_token)
+
         message = client.messages.create(
             body=message_body,
-            from_=phone_number,  # Twilio phone number
-            to=phone_number  # Receiver's phone number
+            from_=phone_number,
+            to=reciever_phone_number
         )
         print(f"Message sent successfully! SID: {message.sid}")
         return True
     except Exception as e:
         print(f"Failed to send SMS: {str(e)}")
         return False
-    
-def send_cancel_sms(phone_number, reservation):
-    try:
-        # Construct message with reservation details
-        message_body = f"Your reservation has been canceled at {reservation.date} {reservation.time}"
         
-        # Send SMS using Twilio API
-        message = client.messages.create(
-            body=message_body,
-            from_=phone_number,  # Twilio phone number
-            to=phone_number  # Receiver's phone number
-        )
-        print(f"Message sent successfully! SID: {message.sid}")
-        return True
-    except Exception as e:
-        print(f"Failed to send SMS: {str(e)}")
-        return False

@@ -4,9 +4,9 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{% static 'bookings/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'bookings/css/styles.css' %}">   
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">   
     <title>Bella Italia</title> 
 </head>
 <body>
@@ -31,16 +31,8 @@
         </div>
     </header>
     <section class="content">
-        <h2>Cancel reservation</h2>
-        <div class="confirmation-details">
-            <ul>
-                <li><strong>Name:</strong> {{ reservation.name }}</li>
-                <li><strong>Phone Number:</strong> {{ reservation.phone_number }}</li>
-                <li><strong>Date:</strong> {{ reservation.date }}</li>
-                <li><strong>Time:</strong> {{ reservation.time }}</li>
-            </ul>
-            <a href="{% url 'cancel_reservation' reservation.id %}" class="confirmation-details-button">Cancel</a>
-        </div>
+        <h2>Your reservation has been successfully cancelled.</h2>
+        <p><strong>You are welcome back to dine at us another time!</strong></p>
     </section>
     <footer>
         <p>&copy; 2021 Bella Italia</p>
@@ -51,6 +43,6 @@
             </ul>
         </nav>
     </footer>
-    <script src="{% static 'bookings/scripts/script.js' %}"></script>
+    <script src="{% static 'scripts/script.js' %}"></script>
 </body>
 </html>

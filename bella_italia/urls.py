@@ -1,5 +1,3 @@
-# bookings/urls.py
-
 from django.urls import path
 from .views import index, make_reservation, reservation_confirmation, menu, get_available_times, cancellation, cancel_reservation, cancellation_confirmation
 
