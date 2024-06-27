@@ -14,21 +14,21 @@ import os
 from dotenv import load_dotenv
 from django.core.wsgi import get_wsgi_application
 from whitenoise import WhiteNoise
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bella_italia.settings')
-
-application = get_wsgi_application()
-application = WhiteNoise(application, root=os.path.join(BASE_DIR, 'staticfiles'))
-
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 load_dotenv()
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bella_italia.settings')
+application = get_wsgi_application()
+
+application = WhiteNoise(application, root=os.path.join(BASE_DIR, 'staticfiles'))
 
 TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
 TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
 TWILIO_PHONE_NUMBER = os.getenv('TWILIO_PHONE_NUMBER')
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'your_secret_key_here'
