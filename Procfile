@@ -1,1 +1,1 @@
-web: gunicorn bella_italia.wsgi 
+web: gunicorn bella_italia.wsgi
