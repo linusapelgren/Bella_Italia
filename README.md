@@ -109,17 +109,11 @@ These are non-essential features that are nice to include if time and resources 
 These are crucial components necessary for the project's success. They form the foundation and primary functionality that the project cannot do without.
 
 - Install all packs 
-- Styling Bootstrap 
-- Sign in Page 
-- Change booking 
 - Create Booking System 
-- Create Folders 
 - Booking app 
-- set a Database 
-- acoount Registration 
-- Design Landing Page 
+- Set a database 
+- Design templates
 - Create Admin 
-- Review 
 - Conection Heroku 
 
 **Users stories**
@@ -133,12 +127,7 @@ At this date no Unfixed bugs
 ## Future Features
 
 - Deals
-- Rooms
-- Services
-- Consuming 
-- Tours Services
-- Gift Cards
-- edit/delete Reviews
+- Change reservation
 
 
 ## Test and Validador
@@ -224,72 +213,34 @@ Used for secondary text.
 ### Darker Gray (`#ddd`):
 Used for dividers and borders.
 
-## DataBase Diagram 
-
-![DataBase](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/database.PNG)
-**User Table**:
-- Fields: `id` (PK), ...
-- Relationship: One user can make many bookings.
-
-**Booking Table**:
-- Fields: `id` (PK), `user_id` (FK), `room_id` (FK), `start_time`, `end_time`, `total_price`, `created_at`.
-- Relationships: 
-  - Belongs to one user (`user_id`).
-  - Belongs to one room (`room_id`).
-
-**Room Table**:
-- Fields: `id` (PK), `name`, `capacity`, `image_url_main`, `description`, `price_per_night`, `small_image_url_1`, `small_image_url_2`, `small_image_url_3`.
-- Relationship: One room can have many bookings.
-
-**Review Table**:
-- Fields: `id` (PK), `user_id` (FK), `room_id` (FK), `rating`, `comment`, `created_at`.
-- Relationships: 
-  - Belongs to one user (`user_id`).
-  - Belongs to one room (`room_id`).
 
   ## Features:
 
   Existing Features 
 
-**Navegation**:
+**Navigation**:
 
   ![Navegation](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/navegation.PNG)
-
-  **Reviews all custumers**:
-
-  ![Reviews](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/reviews.PNG)
 
    **Loggin Message**:
 
   ![Loggin](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/logginmessage.PNG)
 
-  **Book System**:
+  **Booking System**:
 
   ![Book system](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/booksystem.PNG)
 
-  **Manage My Bookings**:
+  **Admin page**:
 
   ![Manage Bookings](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/managebookings.PNG)
 
-  **Change Booking**:
+  **Cancel reservation**:
 
   ![Change Booking](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/change_booking.PNG)
 
-  **Delete Booking**:
-
-  ![Delete Booking](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/deletebooking.PNG)
-
-  **Message Not Logged**:
-
-  ![Not Logged](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/notlogged.PNG)
-
-  **Registration**:
-
-  ![Registration](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/registration_form.PNG)
-
-  **Sign in**:
-
-  ![Sign in](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/logg_in.PNG)
+  **Menu**:
+  
+  ![Change Booking](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/change_booking.PNG)
 
   **About Jeri**:
 
@@ -306,7 +257,7 @@ Used for dividers and borders.
 - **Gitpod**: Used as a cloud-based IDE for development.
 - **Django**: Used as the Python framework for the site.
 - **PostgreSQL**: Used as the relational database management.
-- **PostgreSQL from Code Institute**: Used as the Postgres database.
+- **Heroku Postrgres** Add-on for Heroku app
 - **Heroku**: Used for hosting the deployed back-end site.
 - **Paint**: Used to design my site wireframes.
 - **Canva** Used to make assets for my website
@@ -328,7 +279,7 @@ This website is deployed to Heroku from a GitHub repository. The following steps
 2. On the home page, click "New" and select "Create new app" from the drop-down.
 3. Give the app a name (this must be unique) and select a region. I chose Europe as I am in Europe. Then click "Create app".
 
-## Create a database On ElephantSQL
+## Add heroku postgres to heroku app 
 
 1. Log into the [ElephantSQL](https://www.elephantsql.com/) from Code Institute website and enter your email and click submit.
 2. As soon as you sign up you will receive an email with all the details about your PostgreSQL database.
@@ -346,7 +297,6 @@ This website is deployed to Heroku from a GitHub repository. The following steps
 3. Then scroll to the top and go to the "Deploy" tab and go down to the "Deployment method" section and select GitHub and then sign into your account.
 4. Below that in the "search for a repository to connect to" search box enter the name of your repository that you created on GitHub and click connect.
 5. Once it has been connected scroll down to the "Manual Deploy" and click "Deploy branch". When it has deployed you will see a "view app" button below and this will bring you to your newly deployed app.
-
 Please note that when deploying manually you will have to deploy after each change you make to your repository.
 
 Heroku needs two additional files in order to deploy properly:

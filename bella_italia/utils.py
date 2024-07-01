@@ -45,7 +45,7 @@ client = Client(account_sid, auth_token, phone_number)
 
 def send_sms(reciever_phone_number, reservation):
     try:
-        message_body = f"Your reservation has been confirmed at {reservation.date} {reservation.time}. If you want to cancel this reservation click here: http://localhost:8000/cancel-reservation/{reservation.id}"
+        message_body = f"Your reservation has been confirmed at {reservation.date} {reservation.time}. If you want to cancel this reservation click here: https://bellaitalia-a028d02ecd3c.herokuapp.com/reservation-confirmation/{reservation.id}"
         
         # Ensure client is properly initialized
         client = Client(account_sid, auth_token)
