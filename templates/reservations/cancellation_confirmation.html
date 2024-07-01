@@ -11,7 +11,9 @@
 </head>
 <body>
     <header>
-        <h1>Bella Italia</h1>
+        <div class="logocontainer">
+            <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+        </div>
         <nav id="menu">
             <ul>
                 <li><a href="{% url 'index' %}">Home</a></li>

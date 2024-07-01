@@ -13,8 +13,10 @@
     <title>Bella Italia - Make a Reservation</title> 
 </head>
 <body>
-    <header>
-        <h1>Bella Italia</h1>
+    <header id="header">
+        <div class="logocontainer">
+            <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+        </div>
         <nav id="menu">
             <ul>
                 <li><a href="{% url 'index' %}">Home</a></li>
@@ -33,7 +35,7 @@
             <a href="{% url 'make_reservation' %}">Booking</a>
         </div>
     </header>
-    <section class="content">
+    <section class="container3">
         <h2>Make a Reservation</h2>
         <div class="formcontainer">
             <form method="post" action="{% url 'make_reservation' %}" class="reservation_form" id="reservationForm">

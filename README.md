@@ -2,7 +2,7 @@
 
 ![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/responsive.PNG)
 
-[See live site ](https://hotel-jeri-cd0d2dfc201b.herokuapp.com/)
+[See live site ](https://bellaitalia-a028d02ecd3c.herokuapp.com)
 
 ## Design & Planning 
 
@@ -53,19 +53,11 @@ A total of 15 user stories were identified and completed as part of this project
 
 - Install all packs 
 - Styling Bootstrap 
-- Sign in Page 
-- Change booking 
 - Create Booking System 
-- Create Folders 
-- Booking app 
 - set a Database 
-- acoount Registration 
-- Design Landing Page 
+- Design templates
 - Create Admin 
-- Review 
 - Conection Heroku 
-- Reviews
-- Create Templates
 
 # Challenges Faced
 As the sole individual responsible for this project, I encountered several challenges:
@@ -138,54 +130,8 @@ At this date no Unfixed bugs
 
 ### Desktop 
 
-- Landing Page 
-
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/landingpage.PNG)
-
-- Booking
-
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/booking.PNG)
-
-- My Bookings
-
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/mybookings.PNG)
-
-- After Sign in 
-
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/aftersignin.PNG)
-
-- Registration
-
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/registration.PNG)
-
-- Sign in
-
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/signin.PNG)
-
-
 
 ### Mobile Phone 
-
-- Landing Page 
-
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/landmobile.PNG)
-
-- Booking
-
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/mobilebook.PNG)
-
-- My Bookings
-
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/mobilemybooking.PNG)
-
-- Registration
-
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/mobileregis.PNG)
-
-- Sign in
-
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/mobilesignin.PNG)
-
 
 ## Colour Scheme 
 

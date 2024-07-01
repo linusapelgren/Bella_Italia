@@ -11,16 +11,11 @@ body {
 header {
     height: 120px;
     background-color: black;
-    width: 100%;
-    box-sizing: border-box;
     display: flex;
-    justify-content: left;
+    justify-content: space-between; /* Distribute items evenly */
     align-items: center;
-    position: relative;
-    flex-direction: row;
-    z-index: 200; /* Ensure header is above other sections */
-    transition: all 0.3s ease; /* Add a transition for smooth animation */
-    padding-left: 50px;
+    padding: 0; /* Adjust padding as needed */
+    margin-bottom: 20px;
 }
 
 header.sticky {
@@ -39,21 +34,27 @@ header h1 {
     margin: 0;
 }
 #menu {
+    flex: 1; /* Take remaining space */
     display: flex;
     justify-content: center;
-    width: 75%;
     align-items: center;
-}
-#menu ul {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    font-size: x-large;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
 }
 
+#menu ul {
+    display: flex;
+    list-style: none;
+}
+
+#menu ul li {
+    margin: 0 10px; /* Adjust spacing between menu items */
+}
 #menu a {
     text-decoration: none;
     color: gold;
+    font-size: x-large;
 }
 
 h1 {
@@ -203,13 +204,6 @@ footer p {
 .imgcontainer2 img {
     max-width: 100%;
     height: auto;
-}
-
-.content h2 {
-    color: black;
-    margin: 0;
-    padding: 10px 0;
-    font-size: 2rem;
 }
 
 #buttons {
@@ -417,7 +411,7 @@ footer p {
         display: block; /* Show menu button for small screens */
     }
     header {
-        gap: 60px; /* Adjust gap for smaller screens */
+        gap: 80px; /* Adjust gap for smaller screens */
     }
 
     .row {
@@ -487,4 +481,17 @@ footer p {
     .content h2{
         font-size: 1.6rem;
     }
+}
+
+
+.logocontainer {
+    height: 100%; /* Ensure the logocontainer takes full height */
+    display: flex;
+    align-items: center; /* Center vertically */
+    padding: 20px;
+}
+
+.logo {
+    height: 100%; /* Adjust height of logo as needed */
+    width: auto; /* Maintain aspect ratio */
 }
