@@ -8,6 +8,7 @@ django-livereload-server==0.5.1
 frozenlist==1.4.1
 gunicorn==22.0.0
 multidict==6.0.5
+psycopg2-binary==2.9.9
 PyJWT==2.8.0
 python-decouple==3.8
 python-dotenv==1.0.1
