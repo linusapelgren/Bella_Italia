@@ -15,7 +15,6 @@ header {
     justify-content: space-between; /* Distribute items evenly */
     align-items: center;
     padding: 0; /* Adjust padding as needed */
-    margin-bottom: 20px;
 }
 
 header.sticky {

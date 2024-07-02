@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Load Django static files -->
     {% load static %}
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon for the site -->
     <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">   
-    <title>Bella Italia</title> 
+    <!-- Link to the custom CSS stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Title of the page -->
+    <title>Bella Italia</title>
 </head>
 <body>
     <header>
         <div class="logocontainer">
+            <!-- Site logo -->
             <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
         </div>
         <nav id="menu">
             <ul>
+                <!-- Navigation links -->
                 <li><a href="{% url 'index' %}">Home</a></li>
                 <li><a href="{% url 'menu' %}">Menu</a></li>
                 <li><a href="{% url 'make_reservation' %}">Booking</a></li>
             </ul>
         </nav>
+        <!-- Menu button for small screens -->
         <div id="menusmallscreen">
             <button class="menubtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
+        <!-- Side navigation for small screens -->
         <div id="sidenav" class="sidenav">
             <a href="{% url 'index' %}">Home</a>
             <a href="{% url 'menu' %}">Menu</a>
@@ -35,12 +45,14 @@
     <section class="content">
         <h2>Cancel reservation</h2>
         <div class="confirmation-details">
+            <!-- Display reservation details dynamically -->
             <ul>
                 <li><strong>Name:</strong> {{ reservation.name }}</li>
                 <li><strong>Phone Number:</strong> {{ reservation.phone_number }}</li>
                 <li><strong>Date:</strong> {{ reservation.date }}</li>
                 <li><strong>Time:</strong> {{ reservation.time }}</li>
             </ul>
+            <!-- Link to cancel the reservation, passing the reservation ID -->
             <a href="{% url 'cancel_reservation' reservation.id %}" class="confirmation-details-button">Cancel</a>
         </div>
     </section>
@@ -48,11 +60,13 @@
         <p>&copy; 2021 Bella Italia</p>
         <nav id="footermenu">
             <ul>
-                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i>Follow us on instagram</a></li>
-                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i>Check out our facebook</a></li>
+                <!-- Social media links -->
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i>Follow us on Instagram</a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i>Check out our Facebook</a></li>
             </ul>
         </nav>
     </footer>
+    <!-- Custom JavaScript file -->
     <script src="{% static 'scripts/script.js' %}"></script>
 </body>
 </html>
