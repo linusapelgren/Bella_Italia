@@ -2,6 +2,7 @@ import os
 from decouple import config
 import dj_database_url
 from dotenv import load_dotenv
+import sys
 
 # Load environment variables from .env file
 load_dotenv()
@@ -67,6 +68,12 @@ DATABASES = {
         default=config('DATABASE_URL')
     )
 }
+
+# Test database configuration
+if 'test' in sys.argv:
+    DATABASES['default']['TEST'] = {
+        'NAME': 'sammafisk',  # Replace with your test database name
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

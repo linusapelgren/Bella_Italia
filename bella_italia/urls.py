@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import index, make_reservation, reservation_confirmation, menu, get_available_times, cancellation, cancel_reservation, cancellation_confirmation
+from django.contrib import admin
 
 urlpatterns = [
     path('', index, name='index'),
@@ -10,4 +11,5 @@ urlpatterns = [
     path('cancellation/<int:reservation_id>/', cancellation, name='cancellation'),
     path('cancel-reservation/<int:reservation_id>/', cancel_reservation, name='cancel_reservation'),  
     path('cancellation_confirmation/', cancellation_confirmation, name='cancellation_confirmation'),
+    path('admin/', admin.site.urls),
 ]

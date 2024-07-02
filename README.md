@@ -1,198 +1,148 @@
-# Hotel Jeri 
+# Bella Italia 
 
 ![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/responsive.PNG)
 
 [See live site ](https://bellaitalia-a028d02ecd3c.herokuapp.com)
 
-## Design & Planning 
+## Introduction 
 
-The design and planning of the "Hotel Jeri" web application focused on creating an intuitive and visually appealing user interface that enhances user experience. We implemented a responsive design using Bootstrap, ensuring accessibility across all devices. Google Fonts and Font Awesome icons were integrated to provide a modern and clean aesthetic. The navigation bar offers clear links to essential pages such as Home, Booking, About Jeri, and user-specific sections like My Bookings, Login, and Register, facilitating easy navigation. Secure authentication features, including registration and login, were prioritized to protect user data. The planning phase involved detailed wireframing and prototyping, incorporating stakeholder feedback to refine the design and ensure a user-centric approach.
-
-### Introduction 
-
-Welcome to "Hotel Jeri," a sophisticated web application designed to streamline the booking process and enhance the user experience for our valued guests. Our platform offers a seamless interface for exploring and booking accommodations at Hotel Jeri, with detailed information about our services and the beautiful surroundings of Jeri. Utilizing modern web technologies such as Bootstrap for responsiveness, Google Fonts and Font Awesome for visual appeal, and Django for dynamic content management, we ensure a smooth and enjoyable online experience. With secure authentication features, users can easily register, log in, and manage their bookings, all within a user-friendly and visually appealing environment. Whether you're planning your next vacation or managing your reservations, "Hotel Jeri" is here to provide a convenient and delightful experience.
+Bella Italia is a sophisticated restaurant designed to simplify the restaurant booking experience both for the user and owner. The website contains all the information about the restaurant that you would need and a reservation form 
 
 ### Project Overview 
 
-**Hotel Jeri** is a comprehensive web application designed to simplify the hotel booking experience for users while providing a robust platform for managing reservations. The project leverages modern web technologies and follows best practices in design and user experience to deliver a seamless and engaging interface. Here are the key features and components of the project:
-
-- **Responsive Design**: Built with Bootstrap, the application is fully responsive, ensuring a smooth user experience across all devices, including desktops, tablets, and smartphones.
+**Bella Italia** is a comprehensive web application designed to simplify the hotel booking experience for users while providing a robust platform for managing reservations. The project leverages modern web technologies and follows best practices in design and user experience to deliver a seamless and engaging interface. Here are the key features and components of the project:
 
 - **User-Friendly Interface**: The clean and intuitive interface uses Google Fonts and Font Awesome icons to enhance readability and navigation. The design prioritizes ease of use, allowing users to find information and make bookings effortlessly.
-
-- **Secure Authentication**: Users can register, log in, and log out securely, with their personal information and booking details protected. The platform supports user-specific features such as viewing and managing personal bookings.
 
 - **Dynamic Content Management**: Using Django templates, the application supports dynamic content updates, making it easy to maintain and update information about hotel services, rooms, and local attractions.
 
 - **Navigation and Accessibility**: The site includes a clear and accessible navigation bar with links to essential pages like Home, Booking, About Jeri, My Bookings, Login, and Register. This ensures users can easily access the information they need.
 
-- **Integration with External Resources**: The project incorporates external resources such as Google Fonts for typography and Font Awesome for icons, as well as leveraging CDN-hosted Bootstrap and JavaScript libraries for enhanced performance.
+### Goals of the project
 
-By focusing on these aspects, **Hotel Jeri** aims to provide a top-notch online booking experience, combining functionality with an appealing design to meet the needs of modern travelers.
-
-### Goals of Hotel Jeri Project
-
-The Hotel Jeri project aims to redefine the hotel booking experience by offering a user-friendly web application that prioritizes simplicity, security, and performance. Targeted towards modern travelers, its goals include:
-
-1. **Simplified Booking**: Streamlining the booking process for ease and efficiency.
+1. **Simple Booking**: Streamlining the booking process for ease and efficiency.
 2. **Enhanced User Experience**: Providing an intuitive interface for seamless navigation and interaction.
 3. **Secure Data Handling**: Ensuring the protection of user information and booking details.
-4. **Dynamic Content Management**: Offering up-to-date information on hotel services and local attractions.
-5. **Accessibility and Integration**: Making the platform easily accessible and integrating external resources for enhanced functionality.
-6. **Optimized Performance**: Delivering fast loading times and smooth interactions for a seamless user experience.
+4. **Accessibility and Integration**: Making the platform easily accessible and integrating external resources for enhanced functionality.
+5. **Optimized Performance**: Delivering fast loading times and smooth interactions for a seamless user experience.
 
-By achieving these objectives, Hotel Jeri aims to cater to the needs of its target audience, offering a top-notch online booking platform tailored to modern travelers.
+## User Stories
 
-## User Stories, Bugs and Fix
+### Completed User Stories
 
-# Overview
-This report summarizes the completion of a recent college project, focusing on the user stories and tasks involved. As the sole contributor to this project, I encountered several challenges, particularly in task management and tracking. Despite these challenges, all tasks were completed successfully.
+- Install all buildpacks 
+- Implement sms confirmation
+- Make templates
+- Deploy to heroku 
+- Implement admin page
+- Cancel booked time
+- Implement a working booking system
+- Make a database 
 
-# Completed User Stories
-A total of 15 user stories were identified and completed as part of this project. The completed tasks include:
+### Incomplete User Stories
+- Change reservation
+- Implement messaging system for reservation updates 
+- Prevent double booking when restaurant is full
 
-- Install all packs 
-- Styling Bootstrap 
-- Create Booking System 
-- set a Database 
-- Design templates
-- Create Admin 
-- Conection Heroku 
+### All user stories
+[All Users Stories ](https://github.com/linusapelgren/Bella_Italia/issues)
 
-# Challenges Faced
-As the sole individual responsible for this project, I encountered several challenges:
+## Classification of User Stories
 
-- **Complexity of Tasks:** Certain tasks, such as creating an authentication system and designing the landing page, were complex and required extensive time and research.
-- **Time Management:** Balancing multiple tasks simultaneously proved challenging, especially given the academic workload.
-- **Resource Constraints:** With limited resources and support, I had to rely heavily on self-learning and online resources to complete the project tasks.
+User stories in this project were classified into two types: "Could have" and "Must have".
 
-# Apology and Areas for Improvement
-I acknowledge that there was a lack of control and organization in tracking the progress of user stories. The following areas need improvement:
-
-- **Task Tracking:** Tasks were not always clearly tracked or updated, leading to periods of uncertainty about the project’s progress.
-- **Progress Monitoring:** Regular updates and self-assessment were not consistently performed, which could have helped in identifying and addressing issues earlier.
-- **Prioritization:** Better prioritization of tasks would have ensured that critical tasks were addressed in a timely manner.
-
-I apologize for these shortcomings and the resulting inefficiencies. To improve future projects, I will implement the following practices:
-
-- **Regular Status Updates:** Ensure that all tasks are updated regularly with their current status.
-- **Clear Task Assignments:** Create a more structured timeline and checklist for each task.
-- **Improved Time Management:** Allocate specific times for each task to ensure balanced progress across all project areas.
-
-# Conclusion
-Despite the challenges and areas for improvement, the project was completed successfully with all user stories marked as done. This project provided valuable learning experiences and highlighted the importance of effective task management and tracking. Moving forward, I am committed to refining my project management skills to ensure more efficient and organized project execution.
-
-**user stories dashboard**
-
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/all_usersstories.PNG)
-
-# Classification of User Stories
-
-User stories in this project were classified into two types: "Could Have" and "Epic Must Have".
-
-## Could Have
+### Could Have
 These are non-essential features that are nice to include if time and resources allow. They enhance the project but are not critical to its core functionality.
 
-- Reviews
-- Create Templates 
+- Change reservation
+- Implement sms confirmation
+- Implement messaging system for reservation updates
+- Prevent double booking when restaurant is full
 
-
-## Epic Must Have
+### Must Have
 These are crucial components necessary for the project's success. They form the foundation and primary functionality that the project cannot do without.
 
 - Install all packs 
-- Create Booking System 
-- Booking app 
+- Implement a working booking system
+- Cancel booked time
 - Set a database 
-- Design templates
-- Create Admin 
-- Conection Heroku 
+- Make templates
+- Implement admin page
+- Deploy to heroku
 
-**Users stories**
-
-[All Users Stories ](https://github.com/dhardi/hoteljeri/issues)
-
-### Bugs and Fix 
+## Bugs
 
 At this date no Unfixed bugs
 
-## Future Features
-
-- Deals
+### Future Features
 - Change reservation
+- Implement messaging system for reservation updates 
+- Prevent double booking when restaurant is full
 
+## Testing
 
-## Test and Validador
+### Manual testing
+I conducted a lot of tests during programming. I used a live preview to check if everything i programmed functioned as intended
 
-[Tests Validadors for Hotel Jeri](https://github.com/dhardi/hoteljeri/blob/main/tests.md)
+### Testing on different screen sizes
+I used my browser tools to check how the page looked on different devices
 
-## Wireframes 
+# Wireframes 
 
-### Desktop 
+## Desktop 
 
+<img src="static/images/wireframes/landing.png" alt="Main menu" width="500">
 
-### Mobile Phone 
+<img src="static/images/wireframes/menu.png" alt="Main menu" width="500">
 
-## Colour Scheme 
+<img src="static/images/wireframes/reservation.png" alt="Main menu" width="500">
 
-### Main Blue (`#0d6efd`):
-Used for titles, primary buttons, and some highlighted elements.
+## Mobile Phone 
 
-### Secondary Blue (`#0b5ed7`):
-Used to accentuate buttons on hover.
+<img src="static/images/wireframes/landingmobile.png" alt="Main menu" width="500">
 
-### Darker Blue (`#0056b3`):
-Used for carousel arrow icons and other elements.
+<img src="static/images/wireframes/menumobile.png" alt="Main menu" width="500">
 
-### Light Gray (`#f8f9fa`):
-Used for background in some containers.
+<img src="static/images/wireframes/reservationmobile.png" alt="Main menu" width="500">
 
-### White (`#ffffff`):
-Used for the background of some elements like carousel slides.
+# Features:
 
-### Gray (`#333`):
-Used for main text.
-
-### Lighter Gray (`#555`):
-Used for secondary text.
-
-### Darker Gray (`#ddd`):
-Used for dividers and borders.
-
-
-  ## Features:
-
-  Existing Features 
+Existing Features 
 
 **Navigation**:
 
-  ![Navegation](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/navegation.PNG)
+![Main menu](static/images/mainmenu.png)
 
-   **Loggin Message**:
+![Small screen menu](static/images/menusmall.png)
 
-  ![Loggin](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/logginmessage.PNG)
+**Booking System**:
 
-  **Booking System**:
+***Make reservation***
 
-  ![Book system](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/booksystem.PNG)
+![Reservation form](static/images/reservationform.png)
 
-  **Admin page**:
+![Reservation confirmation](static/images/reservationconfirmation.png)
 
-  ![Manage Bookings](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/managebookings.PNG)
+***Reservation form***
 
-  **Cancel reservation**:
+![Date Picker](static/images/datepicker.png)
 
-  ![Change Booking](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/change_booking.PNG)
+***Cancel reservation***
 
-  **Menu**:
+![Cancel reservation](static/images/cancellation.png)
+
+![Cancellation confirmation](static/images/cancellationconfirmation.png)
+
+**Menu**:
   
-  ![Change Booking](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/change_booking.PNG)
+![Menu](static/images/foodmenu.png)
 
-  **About Jeri**:
+**Admin page**:
 
-  ![About Jeri](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/about_jeri.PNG)
+![Manage reservation](static/images/adminpage.png)
 
- # Technologies Used 
+
+# Technologies Used 
 
 - **HTML**: Used for the main site content.
 - **CSS**: Used for the main site design and layout.
@@ -207,9 +157,9 @@ Used for dividers and borders.
 - **Heroku**: Used for hosting the deployed back-end site.
 - **Paint**: Used to design my site wireframes.
 - **Canva** Used to make assets for my website
-
  
-  # Deployment
+
+# Deployment
 
 This website is deployed to Heroku from a GitHub repository. The following steps were taken:
 
@@ -227,10 +177,14 @@ This website is deployed to Heroku from a GitHub repository. The following steps
 
 ## Add heroku postgres to heroku app 
 
-1. Log into the [ElephantSQL](https://www.elephantsql.com/) from Code Institute website and enter your email and click submit.
-2. As soon as you sign up you will receive an email with all the details about your PostgreSQL database.
-3. You will find the PostgreSQL URL, copy that.
-4. Head over to Gitpod and create a Database URL environment variable in your `env.py` file and set it equal to the copied URL.
+1. On your Heroku dashboard click configure add-ons 
+2. Click find more add-ons
+3. Scroll down until you find Heroku Postgres
+4. Click the Install Heroku Postgres button
+5. Choose app to provision the add-on to 
+6. Go back to your app dashboard and click settings
+7. Click reveal config vars and copy the HEROKU_POSTGRESQL_AMBER_URL and add the value to DATABASE_URL
+4. Head over to Gitpod and create a Database URL environment variable in your `.env` file and set it equal to the copied URL.
 
 ## Deploying to Heroku
 
@@ -281,11 +235,11 @@ After performing the standard Git add, commit, and push to GitHub, you can now t
 ## Credits
 
 Credits to:
-- 
-- 
-- 
-- 
-- 
+- Microsoft paint for making the wireframes
+- Google for some of the images used
+- Twilio for sms function
+- Canva for some of the assets used on the page
+
 
 
 
