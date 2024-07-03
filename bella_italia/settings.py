@@ -63,11 +63,20 @@ WSGI_APPLICATION = 'bella_italia.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+DATABASES = { 
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
-    )
+    ),
+    'test': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'django',
+        'PASSWORD': 'monkeballs69',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
+
 
 # Test database configuration
 if 'test' in sys.argv:
