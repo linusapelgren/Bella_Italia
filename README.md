@@ -1,7 +1,5 @@
 # Bella Italia 
 
-![Responsive](https://github.com/dhardi/hoteljeri/blob/main/docs/imgs/responsive.PNG)
-
 [See live site ](https://bellaitalia-a028d02ecd3c.herokuapp.com)
 
 ## Introduction 
