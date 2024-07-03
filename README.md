@@ -1,28 +1,27 @@
 # Bella Italia 
 
 [See live site ](https://bellaitalia-a028d02ecd3c.herokuapp.com)
+[Admin page](https://bellaitalia-a028d02ecd3c.herokuapp.com/admin/login/?next=/admin/)
 
 ## Introduction 
 
-Bella Italia is a sophisticated restaurant designed to simplify the restaurant booking experience both for the user and owner. The website contains all the information about the restaurant that you would need and a reservation form 
+Bella Italia is a sophisticated restaurant designed to simplify the restaurant booking experience both for the user and owner.
 
 ### Project Overview 
 
-**Bella Italia** is a comprehensive web application designed to simplify the hotel booking experience for users while providing a robust platform for managing reservations. The project leverages modern web technologies and follows best practices in design and user experience to deliver a seamless and engaging interface. Here are the key features and components of the project:
+ **User-Friendly Interface**: The streamlined and user-friendly interface integrates Google Fonts and Font Awesome icons to improve readability and navigation. It emphasizes usability, enabling users to effortlessly locate information and make reservations.
 
-- **User-Friendly Interface**: The clean and intuitive interface uses Google Fonts and Font Awesome icons to enhance readability and navigation. The design prioritizes ease of use, allowing users to find information and make bookings effortlessly.
+- **Dynamic Content Management**: Leveraging Django templates, the platform facilitates seamless updates of dynamic content, simplifying the upkeep of details concerning hotel amenities, accommodations, and local points of interest.
 
-- **Dynamic Content Management**: Using Django templates, the application supports dynamic content updates, making it easy to maintain and update information about hotel services, rooms, and local attractions.
-
-- **Navigation and Accessibility**: The site includes a clear and accessible navigation bar with links to essential pages like Home, Booking, About Jeri, My Bookings, Login, and Register. This ensures users can easily access the information they need.
+- **Navigation and Accessibility**: The website features a straightforward and accessible navigation bar that links to essential sections such as Home, Booking, About Jeri, My Bookings, Login, and Register. This ensures users can easily find the information they seek.
 
 ### Goals of the project
 
-1. **Simple Booking**: Streamlining the booking process for ease and efficiency.
-2. **Enhanced User Experience**: Providing an intuitive interface for seamless navigation and interaction.
-3. **Secure Data Handling**: Ensuring the protection of user information and booking details.
-4. **Accessibility and Integration**: Making the platform easily accessible and integrating external resources for enhanced functionality.
-5. **Optimized Performance**: Delivering fast loading times and smooth interactions for a seamless user experience.
+1. **Simple Booking**: Simplifying the booking process for convenience and effectiveness
+2. **Enhanced User Experience**: Offering an intuitive interface for smooth navigation and engagement.
+3. **Secure Data Handling**:  Guaranteeing the security of user data and reservation details.
+4. **Accessibility and Integration**: Ensuring easy platform access and integrating external tools for enhanced capabilities.
+5. **Optimized Performance**:Providing rapid loading speeds and fluid interactions to optimize user experience.
 
 ## User Stories
 
